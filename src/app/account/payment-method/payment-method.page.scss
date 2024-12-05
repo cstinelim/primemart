@@ -1,0 +1,133 @@
+/* Toolbar and Header Styling */
+ion-header {
+    --background: #f9f9f9;
+  }
+  
+  ion-toolbar {
+    --background: #fed63f; /* Yellow background for the toolbar */
+  }
+  
+  ion-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 40px;
+  }
+  
+  /* Back Button Styling */
+  ion-buttons ion-button {
+    --color: #333;
+  }
+  
+  ion-buttons ion-button:hover {
+    --color: #000;
+    transform: scale(1.1);
+  }
+  
+  /* Card Styling */
+  ion-card {
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background: #fff;
+  }
+  
+  ion-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-card-subtitle {
+    font-size: 14px;
+    color: #8a8a8a;
+  }
+  
+  /* List and Item Styling */
+  ion-list {
+    margin-top: 5px;
+  }
+  
+  ion-item {
+    --background: transparent;
+    --inner-padding-end: 16px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  ion-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  ion-icon {
+    font-size: 24px;
+    color: #5a5a5a;
+  }
+  
+  /* Label Styling */
+  ion-label h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-label p {
+    font-size: 14px;
+    color: #8a8a8a;
+  }
+  
+  /* Button Styling */
+  ion-button {
+    --border-color: #fed63f;
+    --color: #000000;
+    --background: #fed63f;
+  }
+  
+  ion-button:hover {
+    --background: #fed63f;
+    --color: #fff;
+  }
+  
+  ion-button.expand-block {
+    margin-top: 16px;
+    --background: #fed63f;
+    --color: #fff;
+    border-radius: 8px;
+  }
+  
+  ion-button.expand-block:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Confirm Payment Button Styling */
+  .confirm-payment-button {
+    margin-top: 20px;
+    --background: #fed63f;
+    --color: #000000;
+    font-weight: bold;
+    width: 100%;
+  }
+  
+  .confirm-payment-button:hover {
+    transform: scale(1.05);
+    --background: #272725;
+  }
+  
+  
+  .ion-button {
+    --background: transparent;
+    --color: #333;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 4px 12px;
+}
+
+.custom-button {
+    width: 100%; /* Custom width */
+    height: 5%; /* Custom height */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 8px; /* Optional for rounded corners */
+    padding: 8px 16px; /* Adjust padding */
+    align-items: center;
+    justify-content: center;
+  }

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/profile/account">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- Account Information Section -->
+  <ion-card class="account-card">
+    <ion-card-content>
+      <ion-list>
+        <!-- Username -->
+        <ion-item>
+          <ion-icon name="person-circle" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Username</h3>
+            <p>Gelicious</p>
+          </ion-label>
+          <ion-button slot="end" class="ion-button">Edit</ion-button>
+        </ion-item>
+
+        <!-- Email -->
+        <ion-item>
+          <ion-icon name="mail" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Email</h3>
+            <p>gelicious&#64;example.com</p>
+          </ion-label>
+          <ion-button slot="end" class="ion-button">Edit</ion-button>
+        </ion-item>
+
+        <!-- Phone -->
+        <ion-item>
+          <ion-icon name="call" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Phone</h3>
+            <p>+63 123 456 789</p>
+          </ion-label>
+          <ion-button slot="end" class="ion-button">Edit</ion-button>
+        </ion-item>
+
+        <!-- Password -->
+        <ion-item>
+          <ion-icon name="key" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Password</h3>
+            <p>********</p>
+          </ion-label>
+          <ion-button slot="end" class="ion-button">Change</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  </ion-content>

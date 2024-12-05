@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/home">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Profile Section -->
+  <ion-card>
+    <div class="profile-header profile-card">
+      <img
+        src="assets/image/user-icon.jpg"
+        alt="Profile Picture"
+        class="profile-image"
+      />
+      <h2>User Profile</h2>
+      <p class="tagline">Bio here.</p>
+    </div>
+
+    <div class="tabs">
+      <ion-button>
+        <ion-icon name="clipboard" slot="start" size="small"></ion-icon>
+        <p style="font-size: 12px">Orders</p>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="notifications" slot="start" size="small"></ion-icon>
+        <ion-badge color="danger" class="badge">1</ion-badge>
+        <p style="font-size: 12px">Notifications</p>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="cart" slot="start" size="small"></ion-icon>
+        <p style="font-size: 12px">Cart</p>
+      </ion-button>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <!-- Menu Section -->
+    <div class="menu-card">
+      <ion-item button routerLink="/profile/account">
+        <ion-icon name="person" slot="start" size="large"></ion-icon>
+        <ion-label>Account</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/referral">
+        <ion-icon name="person-add" slot="start" size="large"></ion-icon>
+        <ion-label>Refer a Friend</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/help-support">
+        <ion-icon name="help-circle" slot="start" size="large"></ion-icon>
+        <ion-label>Help & Support</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/about-us">
+        <ion-icon
+          name="information-circle"
+          slot="start"
+          size="large"
+        ></ion-icon>
+        <ion-label>About Us</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/">
+        <ion-icon name="log-out" slot="start" size="large"></ion-icon>
+        <ion-label>Log Out</ion-label>
+      </ion-item>
+    </div>
+  </ion-card>
+</ion-content>

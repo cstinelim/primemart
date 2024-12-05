@@ -1,0 +1,113 @@
+/* Toolbar and Header Styling */
+ion-header {
+    --background: #f9f9f9;
+  }
+  
+  ion-toolbar {
+    --background: #fed63f; /* Yellow background for the toolbar */
+  }
+  
+  ion-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 50px;
+  }
+  
+ /* Styling for the Back Button */
+ ion-buttons ion-button {
+    --color: #333; /* Dark gray color for the icon */
+  }
+  
+  ion-buttons ion-button:hover {
+    --color: #000;
+    transform: scale(1.1);
+  }
+  /* Card Styling */
+  ion-card {
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    border-radius: 8px; /* Smooth corners for the card */
+    background: #fff; /* White background for the card */
+  }
+  
+  ion-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-card-subtitle {
+    font-size: 14px;
+    color: #8a8a8a;
+  }
+  
+  /* List and Item Styling */
+  ion-list {
+    margin-top: 5px;
+  }
+  
+  ion-item {
+    --background: transparent;
+    --inner-padding-end: 16px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ddd; /* Subtle separation between items */
+  }
+  
+  ion-item:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+  }
+  
+  ion-icon {
+    font-size: 24px;
+    color: #5a5a5a;
+  }
+  
+  /* Label Styling */
+  ion-label h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-label p {
+    font-size: 14px;
+    color: #8a8a8a;
+  }
+  
+  ion-button {
+    --border-color: #fed63f;
+    --color: #000000;
+    --background: #fed63f;
+  }
+  
+  ion-button:hover {
+    --background: #000000; /* Yellow background on hover */
+    --color: #fff;
+  }
+  
+  ion-button.expand-block {
+    margin-top: 16px;
+    --background: #fed63f; /* Consistent theme color */
+    --color: #fff;
+    border-radius: 8px;
+  }
+  
+  ion-button.expand-block:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  /* Content Padding */
+  div[style] {
+    padding: 16px;
+  }
+
+  .ion-button {
+    --background: transparent;
+    --color: #333;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 4px 12px;
+}
+
+  

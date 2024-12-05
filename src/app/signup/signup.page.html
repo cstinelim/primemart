@@ -1,0 +1,100 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/home">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div id="img">
+    <img src="assets/image/signup-pic.png" />
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list style="background-color: #ffffff">
+    <ion-item-group class="ion-padding">
+      <!-- username field -->
+      <ion-item>
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Enter your username"
+          [(ngModel)]="username"
+          style="background-color: #ffffff"
+        ></ion-input>
+      </ion-item>
+
+      <!-- email field -->
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-input
+          type="email"
+          placeholder="Enter your email"
+          [(ngModel)]="email"
+          style="background-color: #ffffff"
+        ></ion-input>
+      </ion-item>
+
+      <!-- password field -->
+      <ion-item>
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Enter your password"
+          [(ngModel)]="password"
+          (ionInput)="validatePassword()"
+        ></ion-input>
+        <ion-icon
+          name="{{ showPassword ? 'eye-off' : 'eye' }}"
+          slot="end"
+          (click)="togglePasswordVisibility()"
+        ></ion-icon>
+      </ion-item>
+
+      <!-- password error message -->
+      <p *ngIf="passwordError" style="color: red; font-size: 12px">
+        {{ passwordError }}
+      </p>
+
+      <!-- password confirmation field -->
+      <ion-item>
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-input
+          [type]="showPassword2 ? 'text' : 'password'"
+          placeholder="Confirm your password"
+          [(ngModel)]="confirmPassword"
+          (ionInput)="checkPasswordMatch()"
+        ></ion-input>
+        <ion-icon
+          name="{{ showPassword2 ? 'eye-off' : 'eye' }}"
+          slot="end"
+          (click)="togglePasswordVisibility2()"
+        ></ion-icon>
+      </ion-item>
+
+      <!-- password mismatch error message -->
+      <p *ngIf="passwordMismatchError" style="color: red; font-size: 12px; margin-right: 100px">
+        {{ passwordMismatchError }}
+      </p>
+
+      <!-- sign up button -->
+      <div id="signup-button">
+        <ion-button expand="block" shape="default" size="small" (click)="signUp()">Sign Up</ion-button>
+      </div>
+
+      <!-- social sign up -->
+      <p>Or sign up with a social account</p>
+
+      <div id="social-signup" class="social-signup">
+        <ion-button color="light" shape="round" size="small">
+          <ion-icon name="logo-google" slot="start" class="social-icon"></ion-icon>
+        </ion-button>
+
+        <ion-button color="primary" shape="round" size="small">
+          <ion-icon name="logo-facebook" slot="start" class="social-icon"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-item-group>
+  </ion-list>
+</ion-content>

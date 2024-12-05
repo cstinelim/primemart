@@ -1,0 +1,142 @@
+/* Profile Card Styling */
+.profile-card {
+  margin-top: 30px;
+  padding: 16px;
+  text-align: center;
+}
+
+.profile-header {
+  margin-top: 60px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff; /* Circular border around image */
+  margin-bottom: 16px;
+}
+
+.profile-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #8a8a8a;
+  margin-top: 8px;
+}
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  justify-content: center; /* Centers the items horizontally */
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100%; /* Height set to auto to adjust dynamically */
+}
+
+/* Badge Styling */
+.badge {
+  position: absolute;
+  top: 3px; /* Adjusted for proper positioning */
+  right: 100px; /* Adjusted for proper positioning */
+  font-size: 10px;
+  padding: 1px 4px;
+}
+
+.icon-button {
+  position: relative;
+  --background: transparent;
+  --color: #000;
+  font-size: 13px; /* Smaller text size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button ion-icon {
+  font-size: 25px; /* Smaller icon size */
+  margin-right: 5px;
+}
+
+h2 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: -3px;
+  color: #333;
+}
+
+ion-button p {
+  font-size: 10px; /* Smaller text under icon */
+}
+
+/* Menu Card Styling */
+.menu-card {
+  padding: 5px;
+}
+
+ion-item {
+  --background: transparent;
+  --inner-padding-end: 16px;
+  margin-top: 15px;
+}
+
+ion-icon {
+  font-size: 24px;
+  color: #5a5a5a;
+}
+
+ion-label {
+  font-size: 16px;
+  color: #000;
+  margin-left: 16px;
+}
+
+/* Toolbar and Header Styling */
+ion-header {
+  --background: #f9f9f9;
+}
+
+ion-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+ion-toolbar {
+  --background: #fed63f;
+}
+
+ion-item[button]:hover {
+  --background: #fed63f; /* Light background color on hover */
+  --color: #ffffff; /* Change text color to blue on hover */
+  transform: scale(1.03); /* Slightly scale up the item */
+}
+
+ion-card {
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  border-radius: 8px; /* Smooth corners for the card */
+  background: #fff; /* Ensure the card has a white background */
+}
+
+/* Logout Button */
+ion-button {
+  --background: #121111;
+  --color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+ion-button:hover {
+  --background: #fed63f; /* Light background color on hover */
+  --color: #050505; /* Change text color to blue on hover */
+  transform: scale(1.03); /* Slightly scale up the item */
+}

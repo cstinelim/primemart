@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/profile">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Refer a Friend</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Referral Program Information -->
+  <ion-card class="refer-card">
+    <ion-card-header>
+      <ion-card-title>Share the Love!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Invite your friends to join us and get rewards for every successful referral. Your friend gets a special discount too!</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Referral Code Section -->
+  <ion-card class="code-card">
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          <h3>Your Referral Code</h3>
+          <p>ABCD1234</p>
+        </ion-label>
+        <ion-button class="ion-button" slot="end">Copy</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Share Section -->
+  <ion-card class="share-card">
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          <h3>Share via</h3>
+        </ion-label>
+        <ion-button class="ion-button">
+          <ion-icon name="share-social" slot="start"></ion-icon>Share
+        </ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Email Referral -->
+  <ion-card class="email-card">
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Enter Friend's Email</ion-label> <br />
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-button expand="block" color="primary">Send Invitation</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/profile">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Help & Support</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Help and Support Section -->
+  <ion-card class="help-card">
+    <ion-card-header>
+      <ion-card-title>Frequently Asked Questions</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item button>
+          <ion-icon name="help-circle" slot="start"></ion-icon>
+          <ion-label>
+            <h3>How do I reset my password?</h3>
+            <p>Click here to learn more...</p>
+          </ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-icon name="help-circle" slot="start"></ion-icon>
+          <ion-label>
+            <h3>How can I update my email address?</h3>
+            <p>Click here to learn more...</p>
+          </ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-icon name="help-circle" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Where can I view my order history?</h3>
+            <p>Click here to learn more...</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Contact Support Section -->
+  <ion-card class="contact-card">
+    <ion-card-header>
+      <ion-card-title>Contact Support</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Email Support</h3>
+          <p>support&#64;email.com</p>
+        </ion-label>
+        <ion-button class="ion-button">Send Email</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Phone Support</h3>
+          <p>+63 123 456 789</p>
+        </ion-label>
+        <ion-button class="ion-button">Call</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Troubleshooting Section -->
+  <ion-card class="troubleshoot-card">
+    <ion-card-header>
+      <ion-card-title>Troubleshooting</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>If you're experiencing issues, try the following:</p>
+      <ion-list>
+        <ion-item>
+          <ion-label>Clear cache and cookies</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Ensure your app is updated</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Check your internet connection</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,105 @@
+/* Toolbar and Header Styling */
+ion-header {
+    --background: #f9f9f9;
+  }
+  
+  ion-toolbar {
+    --background: #fed63f; /* Yellow background for the toolbar */
+  }
+  
+  ion-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 50px;
+  }
+
+  ion-card {
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    border-radius: 8px; /* Smooth corners for the card */
+    background: #fff; /* Ensure the card has a white background */
+  }
+
+/* Referral Card Styling */
+.refer-card {
+    margin-top: 20px;
+    padding: 16px;
+    background: #e9e6e67b; /* Light yellow background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px;
+  }
+  
+  .refer-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .refer-card p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Code Card Styling */
+  .code-card {
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #e9e6e67b;
+  }
+  
+  .code-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .code-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff; /* Blue for the referral code */
+  }
+  
+  /* Share Card Styling */
+  .share-card {
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #e9e6e67b;
+  }
+  
+  .share-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Email Card Styling */
+  .email-card {
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #e9e6e67b;
+  }
+  
+  .email-card ion-label {
+    color: #555;
+  }
+  
+  .email-card ion-input {
+    margin-bottom: 15px;
+  }
+  
+  .email-card ion-button {
+    margin-top: 10px;
+    --background: #e9e6e67b;
+    --color: #fff;
+  }
+  
+  .email-card ion-button:hover {
+    --background: #333;
+    --color: #fff;
+  }
+  

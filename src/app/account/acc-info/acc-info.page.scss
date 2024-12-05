@@ -1,0 +1,84 @@
+/* Account Card Styling */
+.account-card {
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    border-radius: 8px; /* Smooth corners for the card */
+    background: #fff; /* White background for the card */
+}
+
+ion-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Account Info List Styling */
+ion-list {
+    margin-top: 5px;
+}
+
+ion-item {
+    --background: transparent;
+    --inner-padding-end: 16px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ddd; /* Adds subtle separation between items */
+}
+
+ion-item:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+}
+
+ion-icon {
+    font-size: 24px;
+    color: #5a5a5a;
+}
+
+ion-label h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+ion-label p {
+    font-size: 14px;
+    color: #8a8a8a;
+}
+
+  ion-button.expand-block {
+    margin-top: 16px;
+    --background: #fed63f; /* Consistent theme color */
+    --color: #fff;
+    border-radius: 8px;
+  }
+  
+  ion-button.expand-block:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+
+/* Toolbar and Header Styling */
+ion-header {
+    --background: #f9f9f9;
+  }
+  
+  ion-toolbar {
+    --background: #fed63f; /* Yellow background for the toolbar */
+  }
+  
+  ion-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 40px;
+  }
+  
+  /* Styling for the Back Button */
+  ion-buttons ion-button {
+    --color: #333; /* Dark gray color for the icon */
+  }
+  
+  ion-buttons ion-button:hover {
+    --color: #000; /* Black color on hover for better emphasis */
+    transform: scale(1.1); /* Slightly enlarges on hover */
+  }
+  

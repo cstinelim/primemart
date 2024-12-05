@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/profile/account">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Saved Addresses Section -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Saved Addresses</ion-card-title>
+      <ion-card-subtitle>Manage your delivery locations</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <!-- Home Address -->
+        <ion-item>
+          <ion-icon name="home" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Home</h3>
+            <p>NEUST, Sumacab</p>
+          </ion-label>
+          <ion-button class="ion-button" slot="end">Edit</ion-button>
+        </ion-item>
+
+        <!-- Office Address -->
+        <ion-item>
+          <ion-icon name="briefcase" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Office</h3>
+            <p>CICT Building</p>
+          </ion-label>
+          <ion-button class="ion-button" slot="end">Edit</ion-button>
+        </ion-item>
+
+        <!-- Other Address -->
+        <ion-item>
+          <ion-icon name="pin" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Other</h3>
+            <p>Room 303</p>
+          </ion-label>
+          <ion-button class="ion-button" slot="end">Edit</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Add New Address Button -->
+  <div style="padding: 16px;">
+    <ion-button expand="block">
+      Add New Address
+    </ion-button>
+  </div>
+</ion-content>

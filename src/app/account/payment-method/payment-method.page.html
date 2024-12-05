@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/profile/account">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Payment Method</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-title style="text-align: center; margin: 16px 0;">Choose a Payment Method</ion-card-title>
+    <ion-list>
+      <!-- Credit Card -->
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Credit Card</h3>
+          <p>Visa, MasterCard, etc.</p>
+        </ion-label>
+        <ion-button slot="end" class="ion-button">Select</ion-button>
+      </ion-item>
+
+      <!-- PayPal -->
+      <ion-item>
+        <ion-icon name="logo-paypal" slot="start"></ion-icon>
+        <ion-label>
+          <h3>PayPal</h3>
+          <p>Pay securely through PayPal</p>
+        </ion-label>
+        <ion-button slot="end" class="ion-button">Select</ion-button>
+      </ion-item>
+
+      <!-- GCash -->
+      <ion-item>
+        <ion-icon name="cash-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h3>GCash</h3>
+          <p>Fast and easy mobile payment</p>
+        </ion-label>
+        <ion-button slot="end" class="ion-button">Select</ion-button>
+      </ion-item>
+
+      <!-- Bank Transfer -->
+      <ion-item>
+        <ion-icon name="business-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Bank Transfer</h3>
+          <p>Direct transfer from your bank</p>
+        </ion-label>
+        <ion-button slot="end" class="ion-button">Select</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-button expand="block" class="confirm-payment-button custom-button">
+    Confirm Payment Method
+  </ion-button>
+</ion-content>

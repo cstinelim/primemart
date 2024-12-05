@@ -1,0 +1,76 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/home">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div id="img">
+    <img src="assets/image/login-pic.png" />
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list style="background-color: #ffffff">
+    <ion-item-group class="ion-padding">
+      <!-- username -->
+      <ion-item>
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Enter your username"
+          [(ngModel)]="username"
+        ></ion-input>
+      </ion-item>
+
+      <!-- password -->
+      <ion-item class="ion-margin-bottom">
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Enter your password"
+          [(ngModel)]="password"
+        ></ion-input>
+        <ion-icon
+          name="{{ showPassword ? 'eye-off' : 'eye' }}"
+          slot="end"
+          (click)="togglePasswordVisibility()"
+        ></ion-icon>
+      </ion-item>
+
+      <!-- Login error message -->
+      <p *ngIf="loginError" style="color: red; font-size: 12px">
+        {{ loginError }}
+      </p>
+
+      <!-- Log in button -->
+      <div id="login-button">
+        <ion-button expand="full" shape="default" size="small" (click)="login()"
+          >Log In</ion-button
+        >
+      </div>
+
+      <!-- social login -->
+      <p>Or log in with a social account</p>
+
+      <div id="social-login" class="social-login">
+        <ion-button color="light" shape="round" size="small">
+          <ion-icon
+            name="logo-google"
+            slot="start"
+            class="social-icon"
+          ></ion-icon>
+        </ion-button>
+
+        <ion-button color="primary" shape="round" size="small">
+          <ion-icon
+            name="logo-facebook"
+            slot="start"
+            class="social-icon"
+          ></ion-icon>
+        </ion-button>
+      </div>
+    </ion-item-group>
+  </ion-list>
+</ion-content>

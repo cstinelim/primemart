@@ -1,0 +1,7 @@
+{
+  "name": "primemart",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,82 @@
+/* About Us Section Styling */
+.about-us-card,
+.mission-card,
+.vision-card,
+.team-card {
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Smooth corners */
+  background: #d5d3d3; /* White background */
+}
+
+/* Section Titles */
+ion-card-header {
+  background-color: #898888;
+  padding: 12px;
+}
+
+ion-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* About Us Text */
+ion-card-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  padding: 15px;
+}
+
+/* Team Section Styling */
+.team-card ion-item {
+  --background: transparent;
+  --inner-padding-end: 16px;
+  margin-top: 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.team-card ion-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-card ion-label h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.team-card ion-label p {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Header Styling */
+ion-header {
+  --background: #f9f9f9;
+}
+
+ion-toolbar {
+  --background: #fed63f;
+}
+
+ion-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+ion-buttons ion-button {
+  --background: transparent;
+  --color: #333;
+}
+
+ion-buttons ion-button:hover {
+  --color: #fed63f;
+}
