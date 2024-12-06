@@ -1,0 +1,60 @@
+/* Orders Page Styling */
+ion-card {
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #fff;
+}
+
+ion-card-title {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ion-item {
+  margin-top: 15px;
+}
+
+ion-label {
+  font-size: 16px;
+  color: #000;
+}
+
+ion-button:hover {
+  --background: #fed63f; /* Yellow background on hover */
+  --color: #fff;
+}
+
+ion-button.expand-block {
+  margin-top: 16px;
+  --background: #fed63f; /* Consistent theme color */
+  --color: #fff;
+  border-radius: 8px;
+}
+
+ion-button.expand-block:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+ion-icon {
+  font-size: 24px;
+  color: #5a5a5a;
+}
+
+/* Toolbar and Header Styling */
+ion-header {
+  --background: #f9f9f9;
+}
+
+ion-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+ion-toolbar {
+  --background: #fed63f;
+}

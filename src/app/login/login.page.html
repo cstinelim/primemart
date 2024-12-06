@@ -14,13 +14,13 @@
 <ion-content [fullscreen]="true">
   <ion-list style="background-color: #ffffff">
     <ion-item-group class="ion-padding">
-      <!-- username -->
+      <!-- email -->
       <ion-item>
-        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-icon name="mail" slot="start"></ion-icon>
         <ion-input
-          type="text"
-          placeholder="Enter your username"
-          [(ngModel)]="username"
+          type="email"
+          placeholder="Enter your email"
+          [(ngModel)]="email"
         ></ion-input>
       </ion-item>
 
@@ -46,9 +46,9 @@
 
       <!-- Log in button -->
       <div id="login-button">
-        <ion-button expand="full" shape="default" size="small" (click)="login()"
-          >Log In</ion-button
-        >
+        <ion-button expand="full" shape="default" size="small" (click)="login()">
+          Log In
+        </ion-button>
       </div>
 
       <!-- social login -->
@@ -56,19 +56,11 @@
 
       <div id="social-login" class="social-login">
         <ion-button color="light" shape="round" size="small">
-          <ion-icon
-            name="logo-google"
-            slot="start"
-            class="social-icon"
-          ></ion-icon>
+          <ion-icon name="logo-google" slot="start" class="social-icon"></ion-icon>
         </ion-button>
 
         <ion-button color="primary" shape="round" size="small">
-          <ion-icon
-            name="logo-facebook"
-            slot="start"
-            class="social-icon"
-          ></ion-icon>
+          <ion-icon name="logo-facebook" slot="start" class="social-icon"></ion-icon>
         </ion-button>
       </div>
     </ion-item-group>

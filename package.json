@@ -28,6 +28,7 @@
     "@capacitor/haptics": "6.0.2",
     "@capacitor/keyboard": "6.0.3",
     "@capacitor/status-bar": "6.0.2",
+    "@ionic-native/sqlite": "^5.36.0",
     "@ionic/angular": "^8.0.0",
     "bcryptjs": "^2.4.3",
     "ionicons": "^7.0.0",
@@ -64,5 +65,11 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.0"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-nativestorage": {},
+      "cordova-sqlite-storage": {}
+    }
+  }
 }

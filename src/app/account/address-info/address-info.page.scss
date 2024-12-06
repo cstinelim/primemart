@@ -75,14 +75,10 @@ ion-header {
     color: #8a8a8a;
   }
   
-  ion-button {
-    --border-color: #fed63f;
-    --color: #000000;
-    --background: #fed63f;
-  }
+  
   
   ion-button:hover {
-    --background: #000000; /* Yellow background on hover */
+    --background: #fed63f; /* Yellow background on hover */
     --color: #fff;
   }
   

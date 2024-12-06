@@ -1,0 +1,138 @@
+/* Global styles */
+ion-card {
+    margin: 10px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-card-header {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  ion-card-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-card-subtitle {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  ion-card-content {
+    font-size: 12;
+    line-height: 1.5;
+    color: #666;
+    padding-top: 10px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  ion-list {
+    margin-top: 15px;
+    padding: 0;
+  }
+  
+  ion-item {
+    --background: #f9f9f9;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    margin-bottom: 10px;
+  }
+  
+  ion-label {
+    font-size: 12px;
+    color: #333;
+  }
+  
+  ion-icon {
+    color: #666;
+    margin-right: 12px;
+  }
+  
+  h3 {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    li {
+      list-style-type: none;
+      font-size: 14px;
+      color: #555;
+    }
+  }
+  
+  p {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #777;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  ion-card-footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Button styling */
+  ion-button.danger {
+    background-color: #d9534f;
+    color: white;
+    font-weight: bold;
+  
+    &:hover {
+      background-color: #c9302c;
+    }
+  }
+  
+  /* No order found card */
+  ion-card.no-order {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+  }
+  
+  ion-card.no-order ion-card-header {
+    text-align: center;
+    background-color: #ffeeba;
+    color: #856404;
+  }
+  
+  ion-card.no-order ion-card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #856404;
+  }
+  
+  ion-card.no-order ion-card-content {
+    color: #856404;
+  }
+
+  /* Toolbar and Header Styling */
+ion-header {
+    --background: #f9f9f9;
+  }
+  
+  ion-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 50px;
+  }
+  
+  ion-toolbar {
+    --background: #fed63f;
+  }
+  
+  

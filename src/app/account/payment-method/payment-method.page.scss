@@ -77,12 +77,6 @@ ion-header {
   }
   
   /* Button Styling */
-  ion-button {
-    --border-color: #fed63f;
-    --color: #000000;
-    --background: #fed63f;
-  }
-  
   ion-button:hover {
     --background: #fed63f;
     --color: #fff;
@@ -114,20 +108,4 @@ ion-header {
   }
   
   
-  .ion-button {
-    --background: transparent;
-    --color: #333;
-    font-size: 14px;
-    border-radius: 6px;
-    padding: 4px 12px;
-}
 
-.custom-button {
-    width: 100%; /* Custom width */
-    height: 5%; /* Custom height */
-    font-size: 16px; /* Adjust font size */
-    border-radius: 8px; /* Optional for rounded corners */
-    padding: 8px 16px; /* Adjust padding */
-    align-items: center;
-    justify-content: center;
-  }

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/profile">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-title style="text-align: center; margin: 16px 0;">Latest Notifications</ion-card-title>
+    
+    <ion-list>
+      <ion-item *ngFor="let notification of notifications">
+        <ion-icon name="notifications" slot="start"></ion-icon>
+        <ion-label>
+          <!-- Make the text bold when notification is unread -->
+          <h3 [ngClass]="{ 'bold-text': !notification.read }">{{ notification.title }}</h3>
+          <p [ngClass]="{ 'bold-text': !notification.read }">{{ notification.message }}</p>
+          <small>{{ notification.time }}</small>
+        </ion-label>
+        <!-- Display button based on read status -->
+        <ion-button 
+          slot="end" 
+          color="{{ notification.read ? 'medium' : 'primary' }}" 
+          (click)="markAsRead(notification)" 
+          [disabled]="notification.read">
+          {{ notification.read ? 'Read' : 'Mark as Read' }}
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

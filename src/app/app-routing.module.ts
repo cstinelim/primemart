@@ -65,6 +65,18 @@ const routes: Routes = [
     loadChildren: () =>
       import('./about-us/about-us.module').then((m) => m.AboutUsPageModule),
   },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
+  {
+    path: 'orders',
+    loadChildren: () => import('./orders/orders.module').then( m => m.OrdersPageModule)
+  },
+  {
+    path: 'order-details/:id',
+    loadChildren: () => import('./order-details/order-details.module').then( m => m.OrderDetailsPageModule)
+  },
 ];
 
 @NgModule({

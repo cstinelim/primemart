@@ -23,9 +23,20 @@
           <ion-icon name="home" slot="start"></ion-icon>
           <ion-label>
             <h3>Home</h3>
-            <p>NEUST, Sumacab</p>
+            <p *ngIf="!isEditing.home">{{ savedAddresses.home }}</p>
+            <ion-input
+              *ngIf="isEditing.home"
+              [(ngModel)]="savedAddresses.home"
+              placeholder="Enter Home Address"
+            ></ion-input>
           </ion-label>
-          <ion-button class="ion-button" slot="end">Edit</ion-button>
+          <ion-button
+           
+            slot="end"
+            (click)="isEditing.home ? saveAddress('home') : toggleEdit('home')"
+          >
+            {{ isEditing.home ? 'Save' : 'Edit' }}
+          </ion-button>
         </ion-item>
 
         <!-- Office Address -->
@@ -33,9 +44,20 @@
           <ion-icon name="briefcase" slot="start"></ion-icon>
           <ion-label>
             <h3>Office</h3>
-            <p>CICT Building</p>
+            <p *ngIf="!isEditing.office">{{ savedAddresses.office }}</p>
+            <ion-input
+              *ngIf="isEditing.office"
+              [(ngModel)]="savedAddresses.office"
+              placeholder="Enter Office Address"
+            ></ion-input>
           </ion-label>
-          <ion-button class="ion-button" slot="end">Edit</ion-button>
+          <ion-button
+           
+            slot="end"
+            (click)="isEditing.office ? saveAddress('office') : toggleEdit('office')"
+          >
+            {{ isEditing.office ? 'Save' : 'Edit' }}
+          </ion-button>
         </ion-item>
 
         <!-- Other Address -->
@@ -43,9 +65,48 @@
           <ion-icon name="pin" slot="start"></ion-icon>
           <ion-label>
             <h3>Other</h3>
-            <p>Room 303</p>
+            <p *ngIf="!isEditing.other">{{ savedAddresses.other }}</p>
+            <ion-input
+              *ngIf="isEditing.other"
+              [(ngModel)]="savedAddresses.other"
+              placeholder="Enter Other Address"
+            ></ion-input>
           </ion-label>
-          <ion-button class="ion-button" slot="end">Edit</ion-button>
+          <ion-button
+           
+            slot="end"
+            (click)="isEditing.other ? saveAddress('other') : toggleEdit('other')"
+          >
+            {{ isEditing.other ? 'Save' : 'Edit' }}
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- New Addresses Section -->
+  <ion-card *ngIf="newAddresses.length > 0">
+    <ion-card-header>
+      <ion-card-title>New Addresses</ion-card-title>
+      <ion-card-subtitle>Addresses you have added</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <!-- Loop through new addresses -->
+        <ion-item *ngFor="let newAddress of newAddresses">
+          <ion-icon name="map" slot="start"></ion-icon>
+          <ion-label>
+            <h3>{{ newAddress.addressName }}</h3>
+            <p>{{ newAddress.addressValue }}</p>
+          </ion-label>
+          <!-- Delete Button -->
+          <ion-button
+            slot="end"
+            color="danger"
+            (click)="deleteAddress(newAddress.addressName)"
+          >
+            Delete
+          </ion-button>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -53,7 +114,7 @@
 
   <!-- Add New Address Button -->
   <div style="padding: 16px;">
-    <ion-button expand="block">
+    <ion-button expand="block" (click)="addNewAddress()">
       Add New Address
     </ion-button>
   </div>

@@ -74,13 +74,23 @@
       </ion-item>
 
       <!-- password mismatch error message -->
-      <p *ngIf="passwordMismatchError" style="color: red; font-size: 12px; margin-right: 100px">
+      <p
+        *ngIf="passwordMismatchError"
+        style="color: red; font-size: 12px; margin-right: 100px"
+      >
         {{ passwordMismatchError }}
       </p>
 
       <!-- sign up button -->
       <div id="signup-button">
-        <ion-button expand="block" shape="default" size="small" (click)="signUp()">Sign Up</ion-button>
+        <ion-button
+          expand="block"
+          shape="default"
+          size="small"
+          (click)="addUser()"
+        >
+          Sign Up
+        </ion-button>
       </div>
 
       <!-- social sign up -->
@@ -88,11 +98,19 @@
 
       <div id="social-signup" class="social-signup">
         <ion-button color="light" shape="round" size="small">
-          <ion-icon name="logo-google" slot="start" class="social-icon"></ion-icon>
+          <ion-icon
+            name="logo-google"
+            slot="start"
+            class="social-icon"
+          ></ion-icon>
         </ion-button>
 
         <ion-button color="primary" shape="round" size="small">
-          <ion-icon name="logo-facebook" slot="start" class="social-icon"></ion-icon>
+          <ion-icon
+            name="logo-facebook"
+            slot="start"
+            class="social-icon"
+          ></ion-icon>
         </ion-button>
       </div>
     </ion-item-group>

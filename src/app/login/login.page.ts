@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SqliteService } from '../services/sqlite.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,44 +8,50 @@ import { SqliteService } from '../services/sqlite.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  username: string = ''; // Username field
-  password: string = ''; // Password field
-  showPassword: boolean = false; // Password visibility toggle
-  loginError: string = ''; // Error message for invalid login
+  email: string = '';
+  password: string = '';
+  loginError: string = '';
+  showPassword: boolean = false;
 
-  constructor(private sqliteService: SqliteService) {}
+  constructor(private database: SqliteService, private router: Router) {}
 
-  // Initialize the database when the page loads
-  ngOnInit() {
-    this.sqliteService.initializeDatabase(); // Ensure the database is ready before using
+  async ngOnInit() {
+    // Initialize database and table before using it
+    await this.database.initDb();
+    await this.database.initTable();
   }
+  
 
-  // Toggle password visibility
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
   }
 
-  // Perform login validation
   async login() {
-    if (!this.username || !this.password) {
-      this.loginError = 'Please enter both username and password';
+    this.loginError = '';
+
+    if (!this.email || !this.password) {
+      this.loginError = 'Email and password are required.';
       return;
     }
 
-    const isValidLogin = await this.sqliteService.validateLogin(
-      this.username,
-      this.password
-    );
+    try {
+      // Get all users from the database
+      const users = await this.database.read();
 
-    if (isValidLogin) {
-      console.log('Login successful');
-      // Navigate to another page (profile, home, etc.) after successful login
-      // For example: this.router.navigate(['/home']);
-    } else {
-      console.log('Login failed');
-      // Optionally, log the database contents to check if the user exists
-      await this.sqliteService.logDatabaseContents();
-      this.loginError = 'Invalid username or password';
+      // Check if a user exists with the provided email and password
+      const user = users.find(
+        (u: any) => u.email === this.email && u.password === this.password
+      );
+
+      if (user) {
+        alert('Login successful!');
+        this.router.navigate(['/profile']);
+      } else {
+        this.loginError = 'Invalid email or password.';
+      }
+    } catch (error) {
+      console.error('Error logging in:', error);
+      this.loginError = 'An error occurred during login. Please try again.';
     }
   }
 }

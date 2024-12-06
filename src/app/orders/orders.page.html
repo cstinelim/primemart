@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/profile">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-title style="text-align: center; margin: 16px 0"
+      >Your Orders</ion-card-title
+    >
+
+    <ion-list>
+      <!-- Loop through orders and display them -->
+      <ion-item *ngFor="let order of orders">
+        <ion-icon name="cart" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Order ID: {{ order.id }}</h3>
+          <p>{{ order.items.length }} Items</p>
+          <p>Status: <strong>{{ order.status }}</strong></p>
+          <small>{{ order.date }}</small>
+        </ion-label>
+        <!-- View Order Details Button -->
+        <ion-button slot="end" (click)="viewOrderDetails(order)">
+          View Details
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

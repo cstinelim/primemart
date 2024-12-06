@@ -11,16 +11,25 @@
 
 <ion-content>
   <ion-card>
-    <ion-card-title style="text-align: center; margin: 16px 0;">Choose a Payment Method</ion-card-title>
+    <ion-card-title style="text-align: center; margin: 16px 0"
+      >Edit Payment Method</ion-card-title
+    >
     <ion-list>
       <!-- Credit Card -->
       <ion-item>
         <ion-icon name="card" slot="start"></ion-icon>
         <ion-label>
           <h3>Credit Card</h3>
-          <p>Visa, MasterCard, etc.</p>
+          <p *ngIf="!isEditing.creditCard">{{ creditCardNumber }}</p>
+          <ion-input
+            *ngIf="isEditing.creditCard"
+            [(ngModel)]="creditCardNumber"
+            placeholder="Enter Number"
+          ></ion-input>
         </ion-label>
-        <ion-button slot="end" class="ion-button">Select</ion-button>
+        <ion-button slot="end" (click)="toggleEdit('creditCard')">
+          {{ isEditing.creditCard ? 'Save' : 'Edit' }}
+        </ion-button>
       </ion-item>
 
       <!-- PayPal -->
@@ -28,9 +37,16 @@
         <ion-icon name="logo-paypal" slot="start"></ion-icon>
         <ion-label>
           <h3>PayPal</h3>
-          <p>Pay securely through PayPal</p>
+          <p *ngIf="!isEditing.paypal">{{ paypalNumber }}</p>
+          <ion-input
+            *ngIf="isEditing.paypal"
+            [(ngModel)]="paypalNumber"
+            placeholder="Enter Number"
+          ></ion-input>
         </ion-label>
-        <ion-button slot="end" class="ion-button">Select</ion-button>
+        <ion-button slot="end" (click)="toggleEdit('paypal')">
+          {{ isEditing.paypal ? 'Save' : 'Edit' }}
+        </ion-button>
       </ion-item>
 
       <!-- GCash -->
@@ -38,9 +54,16 @@
         <ion-icon name="cash-outline" slot="start"></ion-icon>
         <ion-label>
           <h3>GCash</h3>
-          <p>Fast and easy mobile payment</p>
+          <p *ngIf="!isEditing.gcash">{{ gcashNumber }}</p>
+          <ion-input
+            *ngIf="isEditing.gcash"
+            [(ngModel)]="gcashNumber"
+            placeholder="Enter Number"
+          ></ion-input>
         </ion-label>
-        <ion-button slot="end" class="ion-button">Select</ion-button>
+        <ion-button slot="end" (click)="toggleEdit('gcash')">
+          {{ isEditing.gcash ? 'Save' : 'Edit' }}
+        </ion-button>
       </ion-item>
 
       <!-- Bank Transfer -->
@@ -48,14 +71,17 @@
         <ion-icon name="business-outline" slot="start"></ion-icon>
         <ion-label>
           <h3>Bank Transfer</h3>
-          <p>Direct transfer from your bank</p>
+          <p *ngIf="!isEditing.bankTransfer">{{ bankTransferNumber }}</p>
+          <ion-input
+            *ngIf="isEditing.bankTransfer"
+            [(ngModel)]="bankTransferNumber"
+            placeholder="Enter Number"
+          ></ion-input>
         </ion-label>
-        <ion-button slot="end" class="ion-button">Select</ion-button>
+        <ion-button slot="end" (click)="toggleEdit('bankTransfer')">
+          {{ isEditing.bankTransfer ? 'Save' : 'Edit' }}
+        </ion-button>
       </ion-item>
     </ion-list>
   </ion-card>
-
-  <ion-button expand="block" class="confirm-payment-button custom-button">
-    Confirm Payment Method
-  </ion-button>
 </ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/orders">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Order Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="order">
+    <ion-card-header>
+      <ion-card-title>Order ID: {{ order.id }}</ion-card-title>
+      <ion-card-subtitle>Status: {{ order.status }}</ion-card-subtitle>
+      <ion-card-subtitle>Date: {{ order.date }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h3>Items:</h3>
+      <ul>
+        <li *ngFor="let item of order.items">{{ item }}</li>
+      </ul>
+
+      <p><strong>Total Price: </strong>{{ order.totalPrice }}</p>
+      <p><strong>Estimated Delivery Date: </strong>{{ order.deliveryDate }}</p>
+    </ion-card-content>
+
+    <ion-button expand="full" color="danger" (click)="cancelOrder()">
+      Cancel Order
+    </ion-button>
+  </ion-card>
+
+  <ion-card *ngIf="!order">
+    <ion-card-header>
+      <ion-card-title>No Order Found</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>There was an issue fetching the order details. Please try again later.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
